@@ -134,9 +134,6 @@ import java.util.Queue;
 
     /**Help functions*/
 
-    Node getRoot() {
-        return root;
-    }
 
     /*Funkcja sprawdza czy węzeł jest czerwoy*/
     private boolean isRed(Node node){

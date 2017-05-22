@@ -10,9 +10,9 @@ import java.util.Scanner;
  * Klasa do otwierania i odczytywania z pliku
  */
  class InputFile {
-    private RedBlackTree<String> redBlackTree;
+    private final RedBlackTree<String> redBlackTree;
     private Queue<String> fileLines = new LinkedList<>();
-    private String path;
+    private final String path;
 
     InputFile(String path) {
         this.path = path;
