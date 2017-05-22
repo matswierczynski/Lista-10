@@ -234,20 +234,17 @@ import java.util.Queue;
 
 
     /*Funkcja pokazuje węzły w kolejności InOrder - Infix z nawiasami*/
-    private void showInOrder(Node node, StringBuilder stringBuilder){
+    private void showInOrder(Node node){
         if (node==null)
             return;
-        showInOrder(node.left, stringBuilder);
-        stringBuilder.append(node);
-        stringBuilder.append(" ");
-        showInOrder(node.right,stringBuilder);
+        showInOrder(node.left);
+        System.out.println(node);
+        showInOrder(node.right);
     }
 
     /*Funkcja dostępna publicznie do wyświetlania w kolejności InOrder*/
-    StringBuilder InfixFromTree(){
-        StringBuilder stringBuilder = new StringBuilder();
-        showInOrder(root,stringBuilder);
-        return stringBuilder;
+    void InOrder(){
+        showInOrder(root);
     }
 
 
@@ -331,7 +328,13 @@ import java.util.Queue;
 
         @Override
         public String toString() {
-            return value.toString();
+            StringBuilder stringBuilder=new StringBuilder();
+            stringBuilder.append(rowNr.poll());
+            while (!rowNr.isEmpty()) {
+                stringBuilder.append(",");
+                stringBuilder.append(rowNr.poll());
+            }
+            return value.toString()+" "+stringBuilder.toString();
         }
     }
 
