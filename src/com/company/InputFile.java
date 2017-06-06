@@ -29,6 +29,7 @@ import java.util.Scanner;
             }
             splitToSubstring();
             redBlackTree.InOrder();
+            redBlackTree.levelOrder(redBlackTree.getRoot());
         } catch (FileNotFoundException e) {
             System.out.println("Nie znaleziono pliku");
             e.printStackTrace();

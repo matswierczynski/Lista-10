@@ -229,8 +229,12 @@ import java.util.Queue;
         }
     }
 
+    Node getRoot(){
+        return root;
+    }
 
-    /*Funkcja pokazuje węzły w kolejności InOrder - Infix z nawiasami*/
+
+    /*Funkcja pokazuje węzły w kolejności InOrder*/
     private void showInOrder(Node node){
         if (node==null)
             return;

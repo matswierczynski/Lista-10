@@ -4,7 +4,7 @@ package com.company;
 
     public static void main(String[] args) {
 
-        InputFile inputFile = new InputFile("C:/Users/Mati/Desktop/zbyszek.txt");
+        InputFile inputFile = new InputFile("C:/Users/Mati/Desktop/lista10.txt");
         inputFile.readFromFile();
     }
 }
